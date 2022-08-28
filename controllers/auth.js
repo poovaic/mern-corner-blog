@@ -1,6 +1,6 @@
 const router =require("express").Router();
 const User = require("../models/User");
-const bcrypt = require('bcrypt'); //importing hashing package
+const bcrypt = require('bcryptjs'); //importing hashing package
 
 
 //REGISTER NEW USER
