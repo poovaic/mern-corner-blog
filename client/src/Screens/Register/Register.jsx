@@ -30,7 +30,8 @@ export default function Register() {
     // res.data && window.location.replace("/login");
     console.log("register success",res)
     // setErr("Successfull y registered new user")
-    setNav(true);
+    res.data && navigate("/login");
+    
   }catch(err){
     setError(true)
     console.log(err)
@@ -39,15 +40,15 @@ export default function Register() {
    
   }
    
-      const goToPost = () => {
-        navigate(`${apiUrl}/login`);
-      };
+      // const goToPost = () => {
+      //   navigate(`${apiUrl}/login`);
+      // };
     
-    useEffect(()=>{
-      goToPost()
-      setNav(false)
+    // useEffect(()=>{
+    //   goToPost()
+    //   setNav(false)
 
-    },[nav])
+    // },[nav])
   
   return (
     <div className="register">
