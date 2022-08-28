@@ -4,7 +4,7 @@ const logger = require("morgan");
 const routes = require("./routes/index");
 const dotenv = require("dotenv");
 const path = require("path");
-app.use(cors())// const userRoute = require("./controllers/users")
+// const userRoute = require("./controllers/users")
 // const postRoute = require("./controllers/posts")
 // const categoryRoute = require("./controllers/categories")
 const multer = require("multer")
@@ -12,6 +12,7 @@ const multer = require("multer")
 
 dotenv.config();
 const app = express();
+app.use(cors({origin: '*'}));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use('/api', routes)
