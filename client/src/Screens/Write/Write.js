@@ -36,7 +36,7 @@ const handleSubmit = async (e) => {
   }
   try {
     const res = await axios.post(`${apiUrl}`+"/posts", newPost);
-    window.location.replace(`${apiUrl}`+"/post/" + res.data._id);
+    window.location.replace("/post/" + res.data._id);
   } catch (err) {}
 };
 
