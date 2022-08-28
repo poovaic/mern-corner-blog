@@ -1,5 +1,5 @@
 import './register.css'
-import { Link,Navigate } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import React, { Component }  from 'react';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
@@ -11,6 +11,8 @@ export default function Register() {
   const[password,setPassword]=useState("");
   const[error,setError]=useState(false);
   //const message= true;
+  const[nav,setNav]=useState(false);
+  const navigate = useNavigate()
   
   
   const handleSubmit = async (e)=>{
@@ -27,8 +29,8 @@ export default function Register() {
     })
     // res.data && window.location.replace("/login");
     console.log("register success",res)
-    // setErr("Successfully registered new user")
-    return <Navigate to="/login"/>
+    // setErr("Successfull y registered new user")
+    setNav(true);
   }catch(err){
     setError(true)
     console.log(err)
@@ -36,6 +38,17 @@ export default function Register() {
   }
    
   }
+   
+      const goToPost = () => {
+        navigate(`${apiUrl}/login`);
+      };
+    
+    useEffect(()=>{
+      goToPost()
+      setNav(false)
+
+    },[nav])
+  
   return (
     <div className="register">
         <span className="registerTitle">Register</span>
