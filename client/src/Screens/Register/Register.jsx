@@ -25,8 +25,8 @@ export default function Register() {
       password,
      
     })
-    res.data && window.location.replace("/login");
-    console.log(res)
+    // res.data && window.location.replace("/login");
+    // console.log(res)
     // setErr("Successfully registered new user")
   }catch(err){
     setError(true)
