@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import React, { Component }  from 'react';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-//import apiUrl from '../../apiConfig';
+import apiUrl from '../../apiConfig';
 
 export default function Register() {
   const[username,setUsername]=useState("");
@@ -19,7 +19,7 @@ export default function Register() {
     setError(false);
     //API CALL FOR REGISTERING NEW USER 
     try{
-    const res = await axios.post(`/auth/register`,{
+    const res = await axios.post(`${apiUrl}/auth/register`,{
       username,
       email,
       password,
