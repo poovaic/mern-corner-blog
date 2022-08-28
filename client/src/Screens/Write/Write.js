@@ -7,6 +7,7 @@ import axios from 'axios'
 import { Context } from '../../context/Context'
 import { useContext } from 'react'
 import apiUrl from '../../apiConfig'
+import { Navigate } from 'react-router'
 
 
 export default function Write() {
@@ -36,7 +37,8 @@ const handleSubmit = async (e) => {
   }
   try {
     const res = await axios.post(`${apiUrl}`+"/posts", newPost);
-    window.location.replace("/post/" + res.data._id);
+    //window.location.replace("/post/" + res.data._id);
+    <Navigate to={`/post/${res.data._id}`}/>
   } catch (err) {}
 };
 
