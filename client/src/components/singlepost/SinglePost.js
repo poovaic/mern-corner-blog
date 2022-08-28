@@ -25,7 +25,7 @@ export default function SinglePost() {
 
   useEffect(()=>{
     const getPost = async()=>{
-      const res = await axios.get("/posts/"+path);
+      const res = await axios.get(`${apiUrl}/posts/`+path);
       console.log('res',res)
 
       
@@ -57,7 +57,7 @@ const handleUpdate= async()=>{
   try{
 
   
-    await axios.put(`/posts/${post._id}`,{username:user.username,title,description});
+    await axios.put(`${apiUrl}/posts/${post._id}`,{username:user.username,title,description});
     //window.location.reload()
     setUpdateMode(false)
     }catch(err){
