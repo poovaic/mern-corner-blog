@@ -13,8 +13,12 @@ export default function Login() {
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
   console.log("apiurl",apiUrl)
+  const [err,setErr] = useState(false)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErr(false)
+
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(`${apiUrl}/auth/login`, {
@@ -25,7 +29,9 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
+      setErr(true)
     }
+
   };
   //console.log(user)
 console.log(isFetching)
@@ -50,7 +56,8 @@ console.log(isFetching)
 
 
         </form>
-      
+        {err && <h2>Wrong Password/Username!!!</h2>}
+
     </div>
   )
 }
