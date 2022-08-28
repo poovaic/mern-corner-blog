@@ -10,13 +10,13 @@ const path = require("path");
 const multer = require("multer")
 
 
-dotenv.config();
+
 const app = express();
 app.use(cors({origin: '*'}));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use('/api', routes)
-
+dotenv.config();
 
 app.use("/images", express.static(path.join(__dirname, "/images")));
  //app.use("/api/auth",authRoute);
