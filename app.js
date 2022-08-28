@@ -4,8 +4,7 @@ const logger = require("morgan");
 const routes = require("./routes/index");
 const dotenv = require("dotenv");
 const path = require("path");
-//const authRoute = require("./controllers/auth")
-// const userRoute = require("./controllers/users")
+app.use(cors())// const userRoute = require("./controllers/users")
 // const postRoute = require("./controllers/posts")
 // const categoryRoute = require("./controllers/categories")
 const multer = require("multer")
@@ -16,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use('/api', routes)
-app.use(cors())
+
 
 app.use("/images", express.static(path.join(__dirname, "/images")));
  //app.use("/api/auth",authRoute);
