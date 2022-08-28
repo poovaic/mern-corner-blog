@@ -26,9 +26,9 @@ export default function Register() {
      
     })
     // res.data && window.location.replace("/login");
-    // console.log(res)
+    console.log("register success",res)
     // setErr("Successfully registered new user")
-    return <Navigate to={`/login`} />
+    return <Navigate to="/login" />
   }catch(err){
     setError(true)
     console.log(err)
