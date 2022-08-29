@@ -3,7 +3,8 @@
     flex:9;
     display:flex;
     flex-wrap:wrap;
-    
+    width:80%;
+
     
     justify-content: center;    
     background-color: #fdfbfb;
