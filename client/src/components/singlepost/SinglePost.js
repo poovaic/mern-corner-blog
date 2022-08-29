@@ -83,9 +83,15 @@ const handleUpdate= async()=>{
 
       {/* UPDATING A POST */}
       {updateMode? (
+        <>
+        <input type = "text" placeholder="Insert image URL" className="singlePostTitleInput"
+        
+        onChange={(e)=>setPhoto(e.target.value)}/>
+
       <input type = "text" value = {title} className="singlePostTitleInput"
       autoFocus
       onChange={(e)=>setTitle(e.target.value)}/>
+      </>
       ) : (
 
         <h1 className="singlePostTitle">
