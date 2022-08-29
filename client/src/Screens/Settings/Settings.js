@@ -18,7 +18,8 @@ export default function Settings() {
   const[success,setSuccess]=useState(false)
   const{user,dispatch} = useContext(Context)
 //const PF = "http://localhost:5000/images/"
-const PF= "/images/"
+// const PF= "/images/"
+const[profilePic,setProfilePic]=useState("")
 
 
 
@@ -31,16 +32,17 @@ const handleSubmit = async (e) => {
     userId: user._id,
     email,
     password,
+    profilePic
   };
-  if (file) {
-    const data =new FormData();
-    const filename = Date.now() + file.name;
-    data.append("name", filename);
-    data.append("file", file);
-    updatedUser.profilePic = filename;
-    try {
-      await axios.post("/upload", data);
-    } catch (err) {}
+  // if (file) {
+  //   const data =new FormData();
+  //   const filename = Date.now() + file.name;
+  //   data.append("name", filename);
+  //   data.append("file", file);
+  //   updatedUser.profilePic = filename;
+  //   try {
+  //     await axios.post("/upload", data);
+  //   } catch (err) {}
   }
   try {
     const res = await axios.put(`${apiUrl}/users/`+user._id, updatedUser);
@@ -68,10 +70,11 @@ const handleSubmit = async (e) => {
                     Profile Picture
                 </label><div className="settingsPP">
                 {/* <img src={file ? URL.createObjectURL(file) : `${apiUrl}`+PF+user.profilePic} alt=""/> */}
+                <img src={user.profilePic} alt="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
                     </div>
-                    <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label>
-                    <input type="file" id="fileInput" style={{display:"none"}}
-                    onChange={(e)=>setFile(e.target.files[0])} /> 
+                    {/* <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label> */}
+                    <input type="text" id="fileInput" 
+                    onChange={(e)=>setprofilePic(e.target.value)} /> 
                                     
 
 
