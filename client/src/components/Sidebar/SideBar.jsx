@@ -24,6 +24,9 @@ export default function SideBar() {
         {/* <span className="si debarTitl">
           ABOUT ME
         </span> */}
+        <a href="https://github.com/poovaic/mern-corner-blog"><FontAwesomeIcon className="sidebarTitleIcon" 
+        icon={faGithub}/>
+        </a>
         <img className="about_me_img" src={img} alt=""/>
         <p>
           Hello! Welcome to 'The Blog on the Corner'. It's a MERN Stack App developed by Poovai.

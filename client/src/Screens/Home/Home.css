@@ -1,10 +1,17 @@
 .homepage{
     display:flex;
     width:100%;
+    overflow:scroll;
+    flex-wrap: wrap;
 }
 @media(max-width:600px){
     .homepage{
         width:100%;
 
+    }
+    .home{
+        top:0;
+        left:0;
+        width:100vw;
     }
 }
