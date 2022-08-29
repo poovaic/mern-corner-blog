@@ -70,10 +70,11 @@ const handleSubmit = async (e) => {
                     Profile Picture
                 </label><div className="settingsPP">
                 {/* <img src={file ? URL.createObjectURL(file) : `${apiUrl}`+PF+user.profilePic} alt=""/> */}
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""/>
+                <img src={user.profilePic} alt=""/>
                     </div>
                     {/* <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label> */}
-                    <input type="text" id="fileInput" 
+                    <input type="text" id="fileInput"
+                    placeholder="Insert Image Url"  
                     onChange={(e)=>setprofilePic(e.target.value)} /> 
                                     
 

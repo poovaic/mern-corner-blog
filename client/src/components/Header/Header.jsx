@@ -73,7 +73,7 @@ return (
             <div>
               
               { user ? (
-           <Link to="/settings"><img className = "header-3-img" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""/> </Link> 
+           <Link to="/settings"><img className = "header-3-img" src={user.profilePic? user.profilePic : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt=""/> </Link> 
               ) : (
                  <ul className="header-menu-item">
                  <li className="header-menu-item"><Link style= {{textDecoration:"none", color:"inherit"}} to="/login">LOGIN</Link></li>
