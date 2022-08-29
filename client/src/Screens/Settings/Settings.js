@@ -19,7 +19,7 @@ export default function Settings() {
   const{user,dispatch} = useContext(Context)
 //const PF = "http://localhost:5000/images/"
 // const PF= "/images/"
-const[profilePic,setProfilePic]=useState("")
+const[profilePic,setprofilePic]=useState("")
 
 
 
@@ -70,7 +70,7 @@ const handleSubmit = async (e) => {
                     Profile Picture
                 </label><div className="settingsPP">
                 {/* <img src={file ? URL.createObjectURL(file) : `${apiUrl}`+PF+user.profilePic} alt=""/> */}
-                <img src={user.profilePic} alt="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"/>
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""/>
                     </div>
                     {/* <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label> */}
                     <input type="text" id="fileInput" 
