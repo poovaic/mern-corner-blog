@@ -8,11 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import apiUrl from '../../apiConfig';
+import { useNavigate } from 'react-router';
 
 export default function SinglePost() {
   const location = useLocation();
   const {user} = useContext(Context)
-
+const navigate = useNavigate()
   //console.log('location',location.pathname.split("/")[2])
   const path = location.pathname.split("/")[2]
   const [post,setPost] =useState({})
@@ -20,6 +21,7 @@ export default function SinglePost() {
   const [description,setDescription]=useState("")
   const [title,setTitle]=useState("")
   const [updateMode,setUpdateMode]=useState(false)
+  const [photo,setPhoto] = useState("")
 
 
 
@@ -32,11 +34,13 @@ export default function SinglePost() {
       setPost(res.data)
       setTitle(res.data.title)
       setDescription(res.data.description)
+      setPhoto(res.data.photo)
+
     };
     getPost()
   },[path])
   
-  const PF = "/images/"
+  // const PF = "/images/"
 
 //const PF = "http://localhost:5000/images/"
 
@@ -45,8 +49,8 @@ const handleDelete =async()=>{
 
   
   await axios.delete(`/posts/${post._id}`,{data:{username:user.username}});
-  window.location.replace("/")
-  
+  // window.location.replace("/")
+  navigate("/")
   }catch(err){
 
   }
@@ -57,7 +61,7 @@ const handleUpdate= async()=>{
   try{
 
   
-    await axios.put(`${apiUrl}/posts/${post._id}`,{username:user.username,title,description});
+    await axios.put(`${apiUrl}/posts/${post._id}`,{username:user.username,title,description,photo});
     //window.location.reload()
     setUpdateMode(false)
     }catch(err){
@@ -72,7 +76,7 @@ const handleUpdate= async()=>{
     <div className ="singlePost">
       <div className = "singlePostContainer">
         {post.photo && (
-      <img className="singlePostImg" src={ `${apiUrl}` + PF + post.photo} alt=""/>
+      <img className="singlePostImg" src={post.photo} alt=""/>
       )}
 
       {/* UPDATING A POST */}
