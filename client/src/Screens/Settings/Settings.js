@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
     } catch (err) {}
   }
   try {
-    const res = await axios.put("/users/"+user._id, updatedUser);
+    const res = await axios.put(`${apiUrl}/users/`+user._id, updatedUser);
     console.log(user._id)
     console.log(user.profilePic)
     console.log("user has successfully been updated")
@@ -67,7 +67,7 @@ const handleSubmit = async (e) => {
                 <label>
                     Profile Picture
                 </label><div className="settingsPP">
-                <img src={file ? URL.createObjectURL(file) : `${apiUrl}`+PF+user.profilePic} alt=""/>
+                {/* <img src={file ? URL.createObjectURL(file) : `${apiUrl}`+PF+user.profilePic} alt=""/> */}
                     </div>
                     <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label>
                     <input type="file" id="fileInput" style={{display:"none"}}
