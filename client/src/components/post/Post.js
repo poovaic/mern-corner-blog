@@ -10,13 +10,13 @@ export default function post({post}) {
 
  //const PF = "http://localhost:5000/images/"
 
- const PF = "/images/"
+//  const PF = "/images/"
  console.log(post)
  console.log(post.photo)
   return (
     <div className="post">
       {post.photo && (
-        <img className="postImg" src={`${apiUrl}`+ PF + post.photo} alt=""/>
+        <img className="postImg" src={post.photo} alt=""/>
       )}
       
    
