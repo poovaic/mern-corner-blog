@@ -100,6 +100,7 @@ ul{
 }
 } */
 
+
 .header{
 
     background-color:#94ae9b;
@@ -110,13 +111,16 @@ ul{
     width:100%;
 
 }
-
+.navbar{
+    flex:9;
+}
 .navbar ul{
     min-width:100%;
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transition:1s ease;
+
 
    
 
@@ -169,10 +173,24 @@ ul{
     height:25px;
     width:25px;
 }
+.blog-icon{
+    height:35px;
+    width:40px;
+    cursor:pointer;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    /* margin-left:auto; */
+    padding-right: 300px;
+    /* margin-right:80px; */
+   
+    
+    }
 
 @media(max-width:600px){
     .header{
         height:40px;
+        
         
     }
     .navbar{
@@ -187,7 +205,7 @@ ul{
     .navbar ul{
         display:flex;
         flex-direction:column;
-        align-items:center;
+        align-items:flex-start;
         justify-content: center;
     }
     
@@ -210,7 +228,9 @@ ul{
         transition:1s ease;
         height:100vh;
         }
-    
+        .hamby{
+            width:80%;
+        }
         .hamby .hamby-icon{
         display:block;
         height:40px;
@@ -239,12 +259,22 @@ ul{
 
 @media only screen and (min-device-width: 650px) and (max-device-width: 1182px){
     .navbar ul li.header-menu-item{
-        margin-block: 1rem;
+        /* margin-block: .1rem; */
         font-size: 18px;
+        margin-inline:1.5rem;
         
     }
     .navbar ul{
         justify-content: flex-start;
         align-items: center;
 }   
+.navbar ul .blog-icon{
+    height:35px;
+    width:40px;
+    cursor:pointer;
+    
+    justify-content: center;
+    align-items: center;
+    padding-right:0px;
+}
 }
