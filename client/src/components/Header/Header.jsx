@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {faSearch,faBars,faX} from '@fortawesome/free-solid-svg-icons'
+import {faSearch,faBars,faX,faBlog} from '@fortawesome/free-solid-svg-icons'
 import {useState} from 'react';
 import { Context } from "../../context/Context";
 import apiUrl from "../../apiConfig";
