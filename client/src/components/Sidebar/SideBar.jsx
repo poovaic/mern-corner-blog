@@ -4,7 +4,7 @@ import axios from 'axios';
 import apiUrl from '../../apiConfig';
 import img from './about_me.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter,faInstagram,faFacebook,faPinterest } from '@fortawesome/free-brands-svg-icons';
+import { faGithub,faTwitter,faInstagram,faFacebook,faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { useState,useEffect } from 'react';
 export default function SideBar() {
   const[cat,setCat]=useState([])
