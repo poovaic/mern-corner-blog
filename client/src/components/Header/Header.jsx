@@ -53,7 +53,9 @@ return (
           <div className='close-icon-div'>
           <FontAwesomeIcon className="close-icon" onClick={showMenu}icon={faX}  />
           </div>
-
+          <>  
+        <FontAwesomeIcon className="blog-icon"  icon={faBlog} />
+        </>
             <li className="header-menu-item"><Link style= {{textDecoration:"none", color:"inherit"}} to="/">HOME</Link></li>
           
             <li className="header-menu-item"><Link style= {{textDecoration:"none", color:"inherit"}} to="/">CONTACT</Link></li>

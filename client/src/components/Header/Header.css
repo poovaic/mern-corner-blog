@@ -210,17 +210,18 @@ ul{
     }
     
     .navbar ul li.header-menu-item{
-        margin-block:2rem;
+        margin-block:3rem;
         list-style: none;
         font-size: 25px;
         font-weight:500;
-        
     }
     
     
     .navbar ul li a{
         
         text-decoration: none;
+        
+
     }
     
     .navbar.active{
