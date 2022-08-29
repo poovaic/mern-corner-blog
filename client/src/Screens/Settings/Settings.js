@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
   //   try {
   //     await axios.post("/upload", data);
   //   } catch (err) {}
-  }
+  //}
   try {
     const res = await axios.put(`${apiUrl}/users/`+user._id, updatedUser);
     console.log(user._id)
