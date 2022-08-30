@@ -145,6 +145,7 @@ I plan to add the following features the App:
 3. Add a method for the user to upload images from a local system or a cloud application
 4. Enable like and comment features for every post.
 5. Create a chat room for the webiste users.
+6. Display latest and popular blogs in the homepage.
 
 
 
