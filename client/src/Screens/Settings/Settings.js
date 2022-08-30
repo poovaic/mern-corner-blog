@@ -74,7 +74,7 @@ const handleSubmit = async (e) => {
                     </div>
                     {/* <label htmlFor="fileInput"><FontAwesomeIcon settingsPPIcon icon={faUser}/></label> */}
                     <input type="text" id="fileInput"
-                    
+                     
                     placeholder={user.profilePic}  
                     onChange={(e)=>setprofilePic(e.target.value)} /> 
                                     
