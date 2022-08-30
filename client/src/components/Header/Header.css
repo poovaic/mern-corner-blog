@@ -210,7 +210,7 @@ ul{
     }
     
     .navbar ul li.header-menu-item{
-        margin-block:3rem;
+        margin-block:1rem;
         list-style: none;
         font-size: 25px;
         font-weight:500;
@@ -229,9 +229,9 @@ ul{
         transition:1s ease;
         height:100vh;
         }
-        .hamby{
+        /* .hamby{
             width:80%;
-        }
+        } */
         .hamby .hamby-icon{
         display:block;
         height:40px;
