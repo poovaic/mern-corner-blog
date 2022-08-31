@@ -16,9 +16,11 @@
    3. Blogs
    4. USer can create an account, write blogs
    
+ 
+    DEPLOYMENT LINKS
    
-   
-   ![Click here to use the App](https://the-blog-on-the-corner.netlify.app/)
+    Netlify - https://the-blog-on-the-corner.netlify.app/
+    Heroku  - https://mern-corner-blog.herokuapp.com/api/posts
     
     
     
